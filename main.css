@@ -1,0 +1,156 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+li{
+    float:left;
+    padding: 1em;
+    text-decoration: none;
+}
+
+li a{
+    text-decoration: none;
+    color:grey;
+}
+
+li a:hover{
+color:black;
+}
+
+nav {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#title{display:none;}
+
+#navBurger{
+    visibility:hidden;
+}
+
+nav span{
+    visibility:hidden;
+}
+
+.nav-links {
+    display: flex;
+    color: grey;
+    font-size: .8em;
+    font-weight:bold;
+}
+
+main{
+      display: grid;
+      padding-left:4em;
+      padding-right:4em;
+      padding-bottom:2em;
+      grid-gap:8em 2em;
+      grid-template-columns: repeat(1, 1fr);
+}
+
+content img{
+    width:100%;
+}
+
+sub{
+    display: grid;
+    padding:0;
+    grid-gap:2em;
+    grid-template-columns: repeat(2, 1fr);   
+}
+
+h1{
+    text-align:center;
+    justify-content: center;
+    padding-top:25%;
+}
+
+h2{
+    text-align:center;
+    justify-content: center;
+    padding-top:2em;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 900px) {
+    nav span{
+        display:none;
+    }
+    #navBurger {
+        visibility:visible;
+        position:absolute;
+        left:10%;
+        top:2em;
+        font-size:1.5em;
+        z-index:99;
+    }
+    #title{
+        position:absolute;
+        right:10%;
+        top:2em;
+        display:block;
+        font-size:1.5em;
+        z-index:-9;
+    }
+    .nav-links {
+        position:fixed;
+        top:-1em;
+        left:0%;
+        display:none;
+        color:white;
+    }
+    li{
+        float:none;
+        padding: 2em;
+        text-decoration: none;
+        position:relative;
+        left:-5%;
+        font-size: large;
+    }
+    li a{
+        color:white;
+    }
+    li:first-child{
+        padding-top: 10em;
+    }
+    li a:hover{
+    color:grey;
+    }
+    .responsive{
+        display:block;
+        background-color:black;
+        height:110vh;
+        width:100vw;
+    }
+    .stop-scroll{
+        height:100%;
+        overflow:hidden;
+    }  
+    main{
+        margin-top:8em;
+    }
+    .useless{
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        text-align:center;
+        text-justify: auto;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+    }
+  }
