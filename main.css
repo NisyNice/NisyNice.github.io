@@ -29,7 +29,8 @@ color:black;
 
 nav {
     width: 100%;
-    display:flex;
+    display:grid;
+    grid-template-columns: 4em auto 4em;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -41,12 +42,9 @@ nav {
     visibility:hidden;
 }
 
-nav span{
-    visibility:hidden;
-}
-
 .nav-links {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
     color: grey;
     font-size: .8em;
     font-weight:bold;
@@ -61,15 +59,26 @@ main{
       grid-template-columns: repeat(1, 1fr);
 }
 
-content img{
+.max-width{
     width:100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 sub{
     display: grid;
     padding:0;
     grid-gap:2em;
-    grid-template-columns: repeat(2, 1fr);   
+    grid-template-columns: repeat(2, 1fr);
+}
+
+sub img{
+    width:100%;
 }
 
 h1{
@@ -82,6 +91,19 @@ h2{
     text-align:center;
     justify-content: center;
     padding-top:2em;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color:inherit;
+}
+
+iframe{
+    display:block;
+    margin:auto;
 }
 
 /* Media Queries */
@@ -142,6 +164,19 @@ h2{
     }  
     main{
         margin-top:8em;
+        grid-gap:4em 2em;
+    }
+    sub{
+        width:100%;
+        grid-template-areas: 
+        "txt txt" 
+        "img img";   
+    }
+    sub h1{
+        grid-area: txt;
+    }
+    sub img{
+        grid-area: img;
     }
     .useless{
         align-items: center;
