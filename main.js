@@ -6,7 +6,7 @@ function menu(){
     if (x.className === "nav-links") {
             x.className += " responsive";
             y.style.color="white";
-            z.style.color="white";
+//            z.style.color="white";
            // window.addEventListener('scroll', noScroll);
            b[0].style.overflow='hidden';
            b[0].style.height='100%';
@@ -14,7 +14,7 @@ function menu(){
     else {
             x.className = "nav-links";
             y.style.color="black";
-            z.style.color="black";
+//            z.style.color="black";
            // window.removeEventListener('scroll', noScroll);
            b[0].style.overflow='auto';
            b[0].style.height='auto';
