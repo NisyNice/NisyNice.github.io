@@ -133,8 +133,8 @@ sub{
 
 sub img{
     width:100%;
-/* fix when img sizes are normalised */
-    max-height:30em;
+/* fix when img sizes are normalised 
+    max-height:30em; */
 }
 
 .center img{
